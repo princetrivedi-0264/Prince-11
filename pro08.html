@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #special-heading {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        #grad1 {
+            height: 500px;
+            background-color: rgb(255, 106, 0); 
+            background-image: linear-gradient(rgb(255, 0, 102), rgb(0, 238, 255));
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grad1">
+    <h1 id="special-heading">
+    <label>Celsius:</label>
+    <input type="number" id="c_to_f" />
+    <button onclick="fer()">Convert in fahrenheit</button>
+    <p id="fresult"></p>
+    <br /><br /><br />
+    <label>Fahrenheit:</label>
+    <input type="number" id="f_to_c" />
+    <button onclick="cel()">Convert in celsius</button>
+    <p id="cresult"></p>
+
+    <script>
+    function fer() {
+        let celsius = document.getElementById("c_to_f").value;
+        let fer = ((celsius * 9) / 5) + 32;
+        document.getElementById("fresult").innerHTML = `celeisu:${celsius} is faherenat: ${fer}`;
+    }
+    function cel() {
+        
+        let faherenat = document.getElementById("f_to_c").value;
+        console.log(faherenat);
+        let cel = ((faherenat - 32)*5)/9;
+        console.log(cel);
+        document.getElementById("cresult").innerHTML = ` faherenat:${faherenat} is celsius: ${cel}`;
+    }
+</script>
+</h1>
+</div>
+</body>
+
+
+</html>
